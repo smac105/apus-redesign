@@ -1,0 +1,22 @@
+<header id="primaryNav" class="fixed-top">
+	<div class="site-header">
+		<nav class="navbar navbar-expand-lg navbar-background">
+			<div class="sm-logo-main"> 
+				<a href="index.html" aria-label="APUS Global Home">
+					{{ image("logo-apus-global-sm.svg", "", "img-logo-main main-logo") }}					
+				</a>
+			</div>
+		    <button id="apusglobal-navbar-collapse-button" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#apusglobal-navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+				<span class="bar top"></span>
+				<span class="bar middle"></span>
+				<span class="bar bottom"></span>
+		    </button>
+			<div id="apusglobal-navbar-collapse" class="navbar-collapse collapse" style="">
+				{% include "partials/nav.njk" %}
+			</div>
+		</nav>
+		<div class="search-nav-wrap">
+			{% include "partials/search.njk" %}
+		</div>
+	</div>
+</header>

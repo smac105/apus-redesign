@@ -1,0 +1,95 @@
+{% from "partials/macros.njk" import navMenu %}
+{% set navItems = [
+  {
+  "slug": "about", "label": "About",
+  "mega": true,
+  "children": [
+    {
+		"links": [
+		{"label": "Office of the President", "url": "/about/presidents-page/", "page": "Office of the President" },
+	    { "label": "Accreditation", "url": "/about/accreditation/", "page": "Accreditation" },
+	    { "label": "Mission & Vision", "url": "/about/mission/", "page": "Mission &amp; Vision" },
+	    { "label": "History", "url": "/about/history/", "page": "History" },
+	    { "label": "Fast Facts", "url": "/about/fast-facts/", "page": "Fast Facts" }
+	    ]
+    },
+    {
+      "links": [
+	    { "label": "Leadership", "url": "/about/leadership/executive-leadership-senior-management/", "page": "Leadership" },
+	    { "label": "Board of Trustees", "url": "/about/leadership/board-of-trustees/", "page": "Board of Trustees" },
+	    { "label": "Employer Relations", "url": "/about/employers/", "page": "Employer Relations" },
+	    { "label": "Government Relations", "url": "/about/government-relations/", "page": "Government Relations" },
+	    { "label": "Newsroom", "url": "/newsroom/", "page": "Newsroom" }
+	    ]
+    },
+    {
+        "links": [
+	    { "label": "Career Opportunities", "url": "/about/careers/", "page": "Career Opportunities" },
+	    { "label": "Consumer Information", "url": "/about/consumer-information/", "page": "Consumer Information" },
+	    { "label": "APUS Vibes", "url": "/about/apusvibes/", "page": "APUS Vibes" },
+	    { "label": "Contact Us", "url": "/about/contact/", "page": "Contact Us" }
+		]
+	}
+	]
+  },
+  { 
+  	"slug": "academic-community", "label": "Academic Community", 
+  	"mega": true,
+  	"children": [
+    {
+		"links": [
+		{ "label": "Catalog (Undergrad/Grad)", "url": "/about/presidents-page/", "page": "Catalog (Undergrad/Grad)" },
+	    { "label": "Journals", "url": "/about/journals/", "page": "Journals" },
+	    { "label": "Library", "url": "/about/Library/", "page": "Library" },
+	    { "label": "Observatory", "url": "/about/observatory/", "page": "Observatory" },
+	    { "label": "Center for Cyber Defense", "url": "/about/center-for-cyber-defense/", "page": "Center for Cyber Defense" }
+	    ]
+    },
+    {
+      "links": [
+	    { "label": "Center for Space Studies", "url": "/about/center-for-space-studies/", "page": "Center for Space Studies" },
+	    { "label": "Center for Teaching & Learning", "url": "/about/center-for-teaching-learning/", "page": "Center for Teaching & Learning" },
+	    { "label": "IntelHub", "url": "/about/intelhub/", "page": "IntelHub" },
+	    { "label": "Learning Outcomes Assessment", "url": "/about/learning-outcomes-assessment/", "page": "Learning Outcomes Assessment" },
+	    { "label": "Research and Creative Inquiry", "url": "/research-and-creative-inquiry/", "page": "Research and Creative Inquiry" }
+	    ]
+    },
+    {
+        "links": [
+	    { "label": "Institutional Review Board (IRB)", "url": "/about/institutional-review-board/", "page": "Institutional Review Board (IRB)" },
+	    { "label": "Academic Resources", "url": "/about/academic-resources/", "page": "Academic Resources" },
+	    { "label": "Conferences", "url": "/about/conferences/", "page": "Conferences" }
+		]
+	}
+	]
+  },
+  { "slug": "partnerships", "label": "Partnerships", "url": "/partnerships.html" },
+  { "slug": "blogs-and-social", "label": "Blogs & Social", "url": "/social-media-center.html" },
+  { 
+  "slug": "military-and-veterans", "label": "Military & Veterans",
+  "mega": true,
+  "children": [
+    {
+		"links": [
+		{ "label": "Overview", "url": "/military/", "page": "Overview" },
+	    { "label": "Active Duty Servicemembers", "url": "/military/active-duty/", "page": "Active Duty Servicemembers" }
+	    ]
+    },
+    {
+      "links": [
+	    { "label": "Veterans", "url": "/military/veterans/", "page": "Veterans" },
+	    { "label": "Spouses & Dependents", "url": "/military/spouses-dependents/", "page": "Spouses & Dependents" }
+	    ]
+    },
+    {
+        "links": [
+	    { "label": "Credentialing Assistance", "url": "/military/credentialing-assistance/", "page": "Credentialing Assistance" },
+	    { "label": "Find Your Local Military Education Manager", "url": "https://www.amu.apus.edu/rep/", "page": "Find Your Local Military Education Manager" }
+		]
+	}
+	]
+  },
+  { "slug": "global-digital-journey", "label": "Global Digital Journey", "url": "/global-digital-journey.html"},
+  { "slug": "campus-login", "label": "Campus Login", "url": "/login.html" }
+] %}
+{{ navMenu(navItems, currentPage) }}

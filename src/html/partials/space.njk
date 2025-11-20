@@ -1,0 +1,29 @@
+<section class="section-space">
+	<video aria-label="soundless background video of stars in space" aria-hidden="true" and role="presentation" poster="./images/space-bg.jpg" id="spacevid" playsinline autoplay loop muted>
+		<source src="./video/space-bg3.mp4" type="video/mp4">
+		<img src="/images/shared/redesign/apus/space-bg.jpg" alt="" role="presentation">
+	</video>
+	<div id="video-controls" class="controls" data-state="visible">
+        {# <button id="playpause" class="play-pause video-play-icon" type="button" data-state="pause" onclick="document.getElementById('bgvid').pause()">Play/Pause</button> #}
+        <button type="button" data-state="pause" onclick="document.getElementById('spacevid').pause()">Pause</button>
+        <button type="button" data-state="play" onclick="document.getElementById('spacevid').play()">Play</button>
+    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 space-intro-wrap">
+				<div class="space-intro">
+					<h2 class="space-title white">Center For Space Studies</h2>
+					<p data-aos="fade-right" data-aos-delay="500" class="space-content white subtitle mb-5">Transforming The Future of Space Through Education & Research</p>
+					{{ buttons.button('Learn More About Space Studies', '/contact', 'main-alt space-btn', '_blank') }}
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<figure>
+					{# <img src="./images/comet.jpg" class="img-square"> #}
+					{{ image("comet.jpg", "Comet Neowise Captured at APUS center for space studies using Planewave CDK Telescope", "img-square") }}
+					<figcaption data-aos="fade-right" data-aos-delay="500" class="white text-center mb-5">Comet Neowise Captured at APUS Center for Space Studies using Planewave CDK Telescope</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>

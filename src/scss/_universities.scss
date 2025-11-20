@@ -1,0 +1,297 @@
+/* OUR UNIVERSITIES SECTION */
+
+.areas-of-study-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .area-item {
+    background: #000;
+    position: relative;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    .area-img-wrap {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: 0 0;
+      }
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      .full-gradient {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.4) 60%);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: all 1.75s ease-in-out;
+        // animation: fade-out linear;
+      }
+    }
+    .area-content {
+      // display: grid;
+      align-items: start;
+      align-content: center;
+      padding: 75px 75px 125px;
+      position: absolute;
+      bottom: 0px;
+      z-index: 1000;
+      width: calc(100%);
+      transition: all 0.25s ease-in-out;
+      height: auto;
+      height: 60px;
+      p {
+        transition: all 1.5s ease-in-out;
+        animation: fade-in linear;
+      }
+      .hidden {
+        opacity: 0.0;
+        display: none;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        a {
+          transition: all 1.0s ease-in-out;
+          opacity: 0.0;
+        }
+      }
+      svg {
+        width: 250px;
+        margin-bottom: 75px;
+      }
+    }
+    .area-content-amu {
+      &:hover {
+        border-bottom: 9px solid $amu-gold;
+        opacity: 1.0;
+      }
+    }
+    .area-content-apu {
+      &:hover {
+        border-image: linear-gradient(to right, #ff0 0, #0ff 100%) 1;
+        border-bottom: 9px solid;
+        opacity: 1.0;
+      }
+    }
+    &:hover {
+      transition: all 1.25s ease-in-out;
+      animation: fade-out linear;
+      .area-content {
+        width: calc(100%);
+        height: calc(75%);
+        background: rgba(255,255,255,1.0);
+        transition: all 0.75s ease-in-out;
+        animation: fade-in linear;
+        // cursor: pointer;
+        svg, p {
+          margin-bottom: 35px;
+        }
+        .st0 {
+          display: block;
+          transition: all 0.75s ease-in-out;
+          fill: #000;
+        }
+        .hidden {
+          opacity: 1.0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          -webkit-transition: all 2s ease-in-out;
+          -moz-transition: all 2s ease-in-out;
+          -ms-transition: all 2s ease-in-out;
+          -o-transition: all 2s ease-in-out;
+          transition: all 2s ease-in-out;
+        }
+        .hidden p, .hidden a {
+          transition: all 2.0s ease-in-out;
+          animation: fade-in linear 2.0s;
+          opacity: 1.0;
+        }
+      }
+      .area-img-wrap {
+        img {
+          background-position: 0 -100px;
+          // margin-top: -150px;
+          margin-top: -240px;
+          transition: all 0.75s ease-in-out;  
+        }
+        .full-gradient {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0));
+          transition: all 2.75s ease-in-out;
+          // animation: fade-in linear;
+          animation: fade-out linear;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+.areas-of-study-wrap .area-item .area-content:hover .hidden p,
+.areas-of-study-wrap .area-item .area-content:hover .hidden a {
+  transition: all 1.0s ease-in-out;
+  animation: fade-in linear 1.0s;
+  opacity: 1.0;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    /*scale: 0.8;*/
+  }
+  to {
+    opacity: 1.0;
+    /*scale: 1.0;*/
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1.0;
+    /*scale: 0.8;*/
+  }
+  to {
+    opacity: 0;
+    /*scale: 1.0;*/
+  }
+}
+@media (max-width: 1499px) {
+  .areas-of-study-wrap .area-item:hover .area-img-wrap img {
+    background-position: 0 -100px;
+    margin-top: -125px;
+    transition: all 0.75s ease-in-out;
+  }
+  .areas-of-study-wrap .area-item .area-content {
+    align-items: start;
+    align-content: center;
+    padding: 40px 40px 125px;
+  }
+  .areas-of-study-wrap .area-item .area-content svg {
+    width: 200px;
+  }
+}
+@media (max-width: 1099px) {
+  .areas-of-study-wrap .area-item:hover .area-img-wrap img {
+    background-position: 0 -80px;
+    margin-top: -105px;
+    transition: all 0.75s ease-in-out;
+  }
+  .areas-of-study-wrap .area-item:hover .area-content svg, .areas-of-study-wrap .area-item:hover .area-content p {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .areas-of-study-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    .area-item {
+      height: 100%;
+      .area-img-wrap {
+        height: 350px;
+        .full-gradient {
+          transition: none;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+          background-position: 0 0;
+          top: 0;
+          position: absolute;
+        }
+      }
+      .area-content {
+        height: 100%;
+        align-items: start;
+        align-content: center;
+        padding: 50px 60px 75px;
+        position: relative;
+        bottom: 0px;
+        z-index: 1000;
+        width: 100%;
+        transition: none;
+        height: auto;
+        background: white;
+        svg {
+          margin-bottom: 15px;
+          .st0 {
+            fill: $blk;
+          }
+          // &:hover {
+          //   margin-bottom: 15px;
+          // }
+        }
+        p {
+          margin-bottom: 35px;
+        }
+        .hidden {
+          display: block;
+          opacity: 1.0;
+          transition: none;
+          a {
+            opacity: 1.0;
+            transition: none;
+          }
+        }
+      }
+      .area-content-amu {
+        border-bottom: 9px solid #ffc600;
+        opacity: 1;
+      }
+      .area-content-apu {
+        border-image: linear-gradient(to right, #ff0 0, #0ff 100%) 1;
+        border-bottom: 9px solid;
+        opacity: 1.0;
+      }
+      &:hover {
+        animation: none;
+        .area-content {
+          height: 100%;
+          p {
+            margin-bottom: 35px;
+          }
+          a {
+            animation: none;
+            transition: none;
+          }
+        }
+        .area-img-wrap {
+          .full-gradient  {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.4) 60%);
+          }
+          img {
+            background-position: 0px 0px;
+            margin-top: 0px;
+            transition: all 0.75s ease-in-out;  
+          }
+        }
+      }
+    }
+    .area-item:hover .area-content svg, .areas-of-study-wrap .area-item:hover .area-content p {
+      margin-bottom: 15px;
+    }
+  }
+}

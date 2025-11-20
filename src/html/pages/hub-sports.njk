@@ -1,0 +1,21 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/macros.njk" import productCard %}
+{# {% import "partials/macros.njk" as buttons %} #}
+{% import "partials/macros.njk" as cards %}
+{% import "partials/macros.njk" as grids %}
+{% import "macros/buttons.njk" as buttons %}
+{% import "macros/buttons.njk" as linkarrow %}
+
+{% block content %}
+
+{% include "partials/hubs/hero-sports-hub.njk" %}
+{% include "partials/meet.njk" %}
+{% include "partials/universities.njk" %}
+{% include "partials/mission.njk" %}
+{% include "partials/president.njk" %}
+{% include "partials/stats.njk" %}
+{% include "partials/news.njk" %}
+{% include "partials/space.njk" %}
+{% include "partials/gdj.njk" %}
+
+{% endblock %}

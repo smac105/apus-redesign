@@ -1,0 +1,8 @@
+{% set pageData = this[currentPage] %}
+
+<header class="site-header">
+  <h1>{{ pageData.title or site.defaultTitle }}</h1>
+  {% if pageData.subtitle %}
+    <p class="subtitle">{{ pageData.subtitle }}</p>
+  {% endif %}
+</header>

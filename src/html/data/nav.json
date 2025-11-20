@@ -1,0 +1,40 @@
+{
+  "items": [
+    { "label": "Home", "url": "/" },
+    {
+      "label": "Services",
+      "url": "#",
+      "children": [
+        { "label": "Consulting", "url": "/consulting" },
+        { "label": "Development", "url": "/development" }
+      ]
+    },
+    {
+      "label": "Products",
+      "mega": true,
+      "children": [
+        {
+          "title": "Category A",
+          "links": [
+            { "label": "Product A1", "url": "/a1" },
+            { "label": "Product A2", "url": "/a2" }
+          ]
+        },
+        {
+          "title": "Category B",
+          "links": [
+            { "label": "Product B1", "url": "/b1" },
+            { "label": "Product B2", "url": "/b2" }
+          ]
+        },
+        {
+          "title": "Category C",
+          "links": [
+            { "label": "Product C1", "url": "/c1" },
+            { "label": "Product C2", "url": "/c2" }
+          ]
+        }
+      ]
+    }
+  ]
+}

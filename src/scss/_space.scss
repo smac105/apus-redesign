@@ -1,0 +1,146 @@
+.section-space {
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.45));
+	min-height: 800px;
+	padding-bottom: 175px;
+	display: grid;
+	align-items: end;
+	position: relative;
+	overflow: clip;
+	.space-intro-wrap {
+	  	animation: movingspace 10s linear infinite alternate;
+	  	.space-intro {
+		  	animation: rotatingspace 40s linear infinite;
+		  	.space-title {
+		  		animation: spacecontent 14s linear infinite;
+		  	}
+		  	.space-content {
+				animation: spacecontent 20s linear infinite;
+		  	}
+		  	.space-btn {
+		  		animation: spacecontent 9s linear infinite;
+		  	}
+		}
+	}
+}
+#spacevid {
+  position: absolute;
+  top: 50%;
+  /* top: calc(50% + 100px); */
+  left: 50%;
+  min-width: 99%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: url('../images/shared/redesign/apus/space-bg.jpg');
+  background-size: cover;
+  object-fit: cover;
+  transition: opacity 1s;
+}
+.intro-content {
+  padding: 125px 0px 20px;
+  animation: fadein 2s linear;
+
+  // text-align: center;
+}
+@media screen and (max-width:800px) {
+  .section-space {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.45)), url('../images/shared/redesign/apus/space-bg.jpg') no-repeat 50% fixed;
+    .intro-content {
+      padding: 25px 0px 0px;
+    }
+  }
+  #spacevid {
+      display: none;
+  }
+}
+@media (max-width: 991px) {
+	.section-space {
+		min-height: auto;
+		padding-bottom: 75px;
+		.space-intro-wrap {
+			padding: 55px 25px 65px;
+		  	animation: none;
+		  	.space-intro {
+			  	animation: none;
+			  	padding: 0px 15px;
+			  	.space-title {
+			  		animation: none;
+			  	}
+			  	.space-content {
+					animation: none;
+			  	}
+			  	.space-btn {
+			  		animation: none;		  	
+			  	}
+			}
+		}
+	}
+}
+@media (max-width: 575px) {
+	.section-space {
+		.space-intro-wrap {
+			padding: 55px 15px 65px;
+		  	animation: none;
+		}
+	}
+}
+.img-square {
+	border: 2px solid $wht;
+	width: 250px;
+	display: block;
+	margin: 0px auto 25px;
+}
+@keyframes rotatingspace {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(6deg);
+	}
+	80% {
+		transform: rotate(-6deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes movingspace {
+	0% {
+	    transform: translateY(-4%);
+	}
+	100% {
+	    transform: translateY(9%);
+	}
+}
+@keyframes spacecontent {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(3deg);
+	}
+	80% {
+		transform: rotate(-3deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes spacetext {
+	0% {
+	    transform: translateY(-5%);
+	}
+	100% {
+	    transform: translateY(1%);
+	}
+}
+@keyframes spacebtn {
+	0% {
+	    transform: translateY(-3%);
+	}
+	100% {
+	    transform: translateY(3%);
+	}
+}

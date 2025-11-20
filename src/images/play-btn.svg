@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="icon-pause-white" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 384 448">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M28.9,35.9v376.3c0,27.1,30.3,43.2,52.7,28l278.9-188.1c19.9-13.4,19.9-42.6,0-56L81.6,7.8c-22.5-15.1-52.7.9-52.7,28Z"/>
+</svg>

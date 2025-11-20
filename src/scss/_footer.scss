@@ -1,0 +1,355 @@
+.footer {
+	background: $primary;
+	padding-top: 45px;
+	padding-bottom: 55px;
+}
+
+.footer-logo-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: flex-start;
+  grid-gap: 40px;
+  padding-bottom: 15px;
+  // align-items: center;
+  /*margin-bottom: 30px;*/
+  color: white;
+  .footer-identity-wrap {
+  	display: grid;
+  	// justify-content: center;
+  	p {
+  		font-size: 13px;
+  		// text-transform: uppercase;
+  		font-weight: 400;
+  		color: $gray-20;
+  		margin-bottom: 5px;
+  	}
+  	hr {
+  		margin-bottom: 10px;
+  	}
+  }
+  .footer-univ-logo-wrap {
+  	display: grid;
+  	grid-template-columns: 1fr 1fr;
+  	gap: 5px;
+  	align-items: center;
+  	justify-items: center;
+  	.footer-univ-logo {
+	  	width: 100px;
+	}
+  }
+  
+}
+.seal-disclaimer-wrap {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 20px;
+	color: $wht;
+	a {
+		color: $wht;
+	}
+}
+.footer-seal-wrap {
+	display: grid;
+	grid-template-columns: 100px auto;
+	grid-gap: 20px;
+	.footer-seal {
+		width: 100px;
+		margin: 0px auto 20px;
+	}	
+}
+
+.contact p {
+  margin-bottom: 0px;
+  font-family: $font-normal;
+  font-weight: 300;
+  /*text-transform: uppercase;*/
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+.contact-email, .contact-phone, .contact-address {
+	display: flex;
+	gap: 10px;
+	&:before {
+		font-family: "Font Awesome 6 Pro";
+		color: $secondary;
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+}
+.contact-email {
+	&:before {
+		content: "\f0e0";
+	}
+}
+.contact-phone {
+	&:before {
+		content: "\f095";
+	}
+}
+.contact-address {
+	&:before {
+		content: "\f3c5";
+	}
+}
+.footer-logo-wrap .contact a {
+  // text-decoration: none;
+  color: $wht;
+}
+.footer-contact-wrap {
+  align-items: end;
+}
+.sm-logo-footer {
+  width: 220px;
+  width: 22.0rem;
+  display: block;
+  margin: 0px auto 10px;
+}
+@keyframes opacityAnimation {
+  from {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+.form-control-full {
+  display: block;
+  padding: .375rem 2.0rem .375rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.5;
+  color: #333333;
+  background-color: #fff;
+  background-clip: padding-box;
+  /*border: 1px solid #000;*/
+  border: 2px solid #0ff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  /*border-radius: 4.0rem;*/
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.footer .footer-nav {
+  // border-bottom: 2px solid rgba(255,255,255,0.25);
+  /*padding-bottom: 10px;
+  padding-bottom: 1.0rem;*/
+  margin-bottom: 10px;
+  margin-bottom: 1.0rem;
+}
+.footer .footer-nav ul {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.footer .footer-nav .nav {
+	display: list-item;
+	margin-left: 0px;
+}
+.footer .footer-nav li {
+  margin-bottom: 9px;
+  margin-bottom: 0.9rem;
+  // margin-right: 15px;
+}
+.footer .footer-nav li:hover {
+  background: none;
+}
+.footer .footer-nav li a {
+  font-family: $font-normal;
+  font-weight: 400;
+  color: $wht;
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  line-height: 1.0rem;
+}
+.footer .footer-nav li a:hover {
+  color: $secondary-alt;
+  background: none;
+  text-decoration: underline;
+}
+.footer .footer-nav-secondary {
+  border-bottom: none;
+}
+.footer .footer-nav-secondary li a {
+  font-family: $font-normal;
+  font-weight: 400;
+}
+.footer .disclaimer p {
+  font-family: $font-normal;
+  font-weight: 200;
+  font-size: 14px;
+  font-size: 1.4rem;
+  /*text-transform: uppercase;*/
+  /*line-height: 1.0;*/
+  color: $wht;
+  // text-align: center;
+}
+.footer h3 {
+  color: #a2874f;
+  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
+  text-shadow: 0px 1px 2px rgba(0,30,97,0.95);
+}
+.footer h4 {
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-bottom: 1.0rem;
+  font-weight: 700;
+}
+// .social-footer {
+//   text-align: right;
+// }
+.social-links {
+	padding-right: 0px;
+	margin: 0px 0px 10px 0px;
+	margin: 0 0 1.0rem 0;
+	padding-left: 0px;
+ 	li {
+		list-style-type: none;
+		display: inline-block;
+		width: 20px;
+		width: 2.0rem;
+		height: 20px;
+		height: 2.0rem;
+		text-align: center;
+		margin-left: 10px;
+		margin-left: 1.0rem;
+		&:first-child {
+				margin-left: 0px;
+			}
+		a {
+			color: $wht;
+			font-size: 20px;
+			font-size: 2.0rem;
+			line-height: 20px;
+			line-height: 2.0rem;
+			&:hover {
+				font-size: 20px;
+				font-size: 2.0rem;
+				color: $secondary;
+			}
+			
+		}
+	}
+}
+.footer-phone {
+  font-weight: 900;
+}
+
+@media (max-width: 991.98px) {
+  /*.footer {
+    padding-bottom: 115px;
+    padding-bottom: 11.5rem;
+  }*/
+  .footer-logo-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .footer .footer-nav .nav-item {
+    border-bottom: none;
+    line-height: 1.1em;
+  }
+   .footer .social-footer {
+    text-align: right;
+    padding-top: 20px;
+    padding-top: 2.0rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+	.footer-logo-wrap {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 0px;
+		text-align: center;
+		.contact {
+		    text-align: center;
+		}
+	}
+
+	.footer {
+		.social-footer {
+			text-align: center;
+		}
+		.social-links {
+			margin-bottom: 30px;
+		}
+		.footer-nav {
+			margin-bottom: 0px;
+			margin-bottom: 0rem;
+			.nav-item {
+			    font-size: 14px;
+			    font-size: 1.4rem;
+			    padding: 0px;
+			}
+			li {
+			    margin-bottom: 7px;
+			    margin-bottom: 0.75rem;
+			    a {
+				    font-size: 15px;
+				    font-size: 1.5rem;
+				    /*text-decoration: underline;*/
+				    line-height: 1.0rem;
+				}
+			}
+		}
+	}
+  .footer h3  {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  .footer .social-links li {
+    margin-left: 10px;
+    width: 20px;
+    width: 2.0rem;
+    height: 20px;
+    height: 2.0rem;
+  }
+  .footer .social-links li a {
+    height: 20px;
+    height: 2.0rem;
+  }
+  .footer .social-links li .bi {
+    font-size: 20px;
+    font-size: 2.0rem;
+  }
+  .footer .social-links li .bi:hover {
+    font-size: 20px;
+    font-size: 2.0rem;
+  }
+  .sm-logo-footer {
+    /*width: 250px;
+    width: 25.0rem;*/
+    margin: 10px auto 20px;
+    margin: 1.0rem auto 2.0rem;
+    display: block;
+  }
+  	.seal-disclaimer-wrap {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		gap: 20px;
+		color: $wht;
+		.disclaimer {
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 575.98px) {
+	.footer { 
+		padding-bottom: 20px; 
+		padding-bottom: 2.0rem;
+	}
+	.footer .footer-nav {
+	    text-align: center;
+	}
+	.footer-widget-wrap {
+	    margin-bottom: 5px;
+	    margin-bottom: 0.5rem;
+	}
+}

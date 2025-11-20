@@ -1,0 +1,9 @@
+{% from "partials/macros.njk" import navTop %}
+{% set topnav = [
+  { "slug": "info", "img": "fa-solid fa-question", "url": "/info.html" },
+  { "slug": "alerts", "img": "fa-solid fa-bell", "url": "/alerts.html" },
+  { "slug": "events", "img": "fa-solid fa-calendar", "url": "/events.html" },
+  { "slug": "store", "img": "fa-solid fa-cart", "url": "/store.html" },
+  { "slug": "menu", "img": "fa-solid fa-grid", "url": "/menu.html" }
+] %}
+{{ navTop(topnav, currentPage) }}

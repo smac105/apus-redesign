@@ -1,0 +1,7 @@
+{
+  "pages": {
+    "home": { "title": "Home - My Website" },
+    "about": { "title": "About Us" },
+    "contact": { "title": "Contact Us - My Website" }
+  }
+}

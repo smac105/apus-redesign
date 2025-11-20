@@ -1,0 +1,197 @@
+{# =======================
+   Buttons
+======================= #}
+{% macro button(label, url="#", type="primary", target, isDisabled=false) %}
+  <a href="{{ url }}" 
+     class="btn-main btn-{{ type }}{% if isDisabled %} disabled{% endif %}" target="{{ target }}" aria-label="{{ label }}"
+     {% if isDisabled %}aria-disabled="true"{% endif %}>
+    {{ label }}
+  </a>
+{% endmacro %}
+
+{# =======================
+  Top Navigation Menu
+======================= #}
+{% macro navTop(tops, currentPage) %}
+  <nav id="sidebarMenuSmall" class="top-nav-wrap">
+    <ul id="topmenu" class="mb-0">
+      {% for top in tops %}
+        <li class="{{ 'active' if top.slug == currentPage }}">
+          <a href="{{ top.url }}"><span class="top-wrap"><i class="{{ top.img }}"></i></span></a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endmacro %}
+
+{# =======================
+  Icon Navigation Menu
+======================= #}
+{% macro navIcon(icons, currentPage) %}
+  <nav id="sidebarMenuSmall" class="icon-nav-wrap">
+    <ul id="iconmenu">
+      {% for icon in icons %}
+        <li class="{{ 'active' if icon.slug == currentPage }}">
+          <a href="{{ icon.url }}"><span class="icon-wrap"><i class="{{ icon.img }}"></i></span><br>{{ icon.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+</nav>
+{% endmacro %}
+
+{# =======================
+   Navigation Menu
+======================= #}
+{% macro navMenu(items, currentPage) %}
+{#   <nav id="sidebarMenu" class="">
+    <div class="pt-2">
+      <ul class="nav mb-sm-auto mb-0" id="menu">
+      {% for item in items %}
+        <li class="nav-link {{ 'active' if item.slug == currentPage }}">
+          <a href="{{ item.url }}">{{ item.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+{% endmacro %} #}
+<ul class="navbar-nav mb-2 mb-lg-0">
+  {% for item in items %}
+    <li class="nav-link {% if item.children %}dropdown{% endif %}">
+      
+      {# Regular link if no children #}
+      {% if not item.children %}
+        <a 
+          class="{% if item.page == currentPage %}active{% endif %}" 
+          aria-label="{{ item.label }}"
+          href="{{ item.url }}">
+          {{ item.label }}
+        </a>
+      
+      {# Dropdown OR Mega Menu #}
+      {% else %}
+        <a 
+          class=" dropdown-toggle {% if item.page == currentPage %}active{% endif %}" 
+          href="#" 
+          id="dropdown-{{ loop.index }}"
+          aria-label="{{ item.label }}" 
+          role="button" 
+          data-bs-toggle="dropdown" 
+          aria-expanded="false">
+          {{ item.label }}
+        </a>
+
+        {# Mega Menu if item.mega is true #}
+        {% if item.mega %}
+          <div class="dropdown-menu mega-menu ml-menu-lvl collapse collapse-or" aria-labelledby="dropdown-{{ loop.index }}" data-bs-auto-close="outside">
+            <div class="dropdown-columns">
+             <a 
+              class="dropdown-reverse-toggle {% if item.page == currentPage %}active{% endif %}" 
+              href="#" 
+              id="dropdown-{{ loop.index }}"
+              aria-label="{{ item.label }}" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false">
+              back
+            </a>
+              {% for column in item.children %}
+                <div class="drop-col">
+                  <ul class="list-unstyled">
+                    {% for link in column.links %}
+                      <li><a class="dropdown-item" aria-label="{{ link.label }}" href="{{ link.url }}">{{ link.label }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        
+        {# Standard Dropdown #}
+        {% else %}
+          <ul class="dropdown-menu" aria-labelledby="dropdown-{{ loop.index }}">
+          {% for child in item.children %}
+            <li>
+              <a 
+                class="dropdown-item {% if child.page == currentPage %}active{% endif %}" 
+                aria-label="{{ child.label }}"
+                href="{{ child.url }}"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                {{ child.label }}
+              </a>
+            </li>
+          {% endfor %}
+          </ul>
+      
+        {% endif %}
+      
+      {% endif %}
+    </li>
+  {% endfor %}
+  
+</ul>
+{% endmacro %}
+
+{# =======================
+   Banner Section
+======================= #}
+{% macro banner(title, subtitle="", image="", showButton=false, buttonText="", buttonUrl="#") %}
+  <section class="banner" style="{% if image %}background-image: url('{{ image }}');{% endif %}">
+    <div class="banner-content">
+      <h1>{{ title }}</h1>
+      {% if subtitle %}
+        <p>{{ subtitle }}</p>
+      {% endif %}
+      {% if showButton %}
+        {{ button(buttonText, buttonUrl, "secondary") }}
+      {% endif %}
+    </div>
+  </section>
+{% endmacro %}
+
+
+{# =======================
+   Product Card
+======================= #}
+{% macro productCard(product) %}
+<div class="product-card{% if not product.inStock %} out-of-stock{% endif %}">
+    <img src="{{ product.image }}" alt="{{ product.name }}">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <span class="price">${{ product.price }}</span>
+    {% if not product.inStock %}
+        <span class="badge">Sold Out</span>
+    {% endif %}
+</div>
+{% endmacro %}
+
+{# =======================
+   Card Grid
+======================= #}
+{% macro cardGrid(items, renderCard) %}
+<div class="product-grid">
+    {% for item in items %}
+        {{ renderCard(item) }}
+    {% endfor %}
+</div>
+{% endmacro %}
+
+{# =======================
+  Images
+======================= #}
+{% macro image(src, alt="", className="", width="", height="", lazy=true, srcset="") %}
+  {# Ensure the base path — you can modify this for your build setup (e.g., /assets/images/) #}
+  {% set basePath = "./images/shared/redesign/apus/" %}
+  {% set fullSrc = basePath + src %}
+
+  <img
+    src="{{ fullSrc }}"
+    alt="{{ alt | escape }}"
+    {% if className %}class="{{ className }}"{% endif %}
+    {% if width %}width="{{ width }}"{% endif %}
+    {% if height %}height="{{ height }}"{% endif %}
+    {% if lazy %}loading="lazy"{% endif %}
+    {% if srcset %}srcset="{{ srcset }}"{% endif %}
+  >
+{% endmacro %}

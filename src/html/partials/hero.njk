@@ -1,0 +1,27 @@
+<section class="section-intro">
+	<video aria-label="soundless background video montage of students and graduates of AMU and APU" aria-hidden="true" and role="presentation" poster="./images/intro-bg.jpg" id="bgvid" autoplay loop muted>
+		<source src="./video/apus-bg-vid2.mp4" type="video/mp4">
+		{{ image("intro-bg.jpg", "Image of a student being interviewed about her experience while sitting on a blue couch") }}
+	</video>
+	<div id="video-controls" class="controls" data-state="visible">
+        <button type="button" data-state="pause" onclick="document.getElementById('bgvid').pause()">Pause</button>
+        <button type="button" data-state="play" onclick="document.getElementById('bgvid').play()">Play</button>
+    </div>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="intro-content text-center">
+					{{ image("apus-logo-white.svg", "American Public University System Logo", "hero-logo") }}
+					<h1 class="white">Empowering Tomorrow's Innovators Today</h1>
+					{# <p data-aos="fade-right" data-aos-delay="500" class="white lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> #}
+					{{ buttons.button('See Our Universities', '#universities', 'main-alt mb-5') }}
+					{# {{ buttons.button('Learn More', '/about', 'secondary') }} #}
+					{# <div class="mouse">
+                        <p class="white">See How We Innovate<i class="fa-thin fa-computer-mouse-scrollwheel"></i></p>
+                        <i class="fa-thin fa-arrow-down"></i>
+                    </div> #}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

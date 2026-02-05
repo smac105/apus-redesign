@@ -22,7 +22,7 @@
 		color: $blk;
 		margin:10px 0px 10px 10px;
 	}
-	&:hover {
+	&:hover, &:focus {
 		border: 2px solid $secondary;
 		background: none;
 		color: $primary;
@@ -48,7 +48,7 @@
 		color: $primary;
 		margin:10px 0px 10px 10px;
 	}
-	&:hover {
+	&:hover, &:focus {
 		border: 2px solid $secondary;
 		background: none;
 		color: $wht !important;
@@ -75,7 +75,7 @@
 		color: $wht;
 		margin:10px 0px 10px 10px;
 	}
-	&:hover {
+	&:hover, &:focus {
 		border: 2px solid $primary-alt;
 		background: $primary-alt;
 		color: $wht;
@@ -100,7 +100,7 @@
 		border: 2px solid $amu-gold;
 		color: $blk;
 	}
-	&:hover {
+	&:hover, &:focus {
 		background: $amu-blue;
 		border: 2px solid $amu-blue;
 		color: $wht;
@@ -116,9 +116,12 @@
 		border: 2px solid $apu-blue;
 		color: $blk;
 	}
-	&:hover {
+	&:hover, &:focus {
 		background: $apu-green;
 		border: 2px solid $apu-green;
 	}
 	
+}
+.btn-amu, .btn-apu {
+	display: inline-block !important;
 }

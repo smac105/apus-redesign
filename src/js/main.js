@@ -1,20 +1,3 @@
-// $('body').on('mouseenter mouseleave', '.dropdown', function (e) {
-//     var dropdown = $(e.target).closest('.dropdown');
-//     var menu = $('.dropdown-menu', dropdown);
-//     dropdown.addClass('show');
-//     menu.addClass('show');
-//     setTimeout(function () {
-//         dropdown[dropdown.is(':hover') ? 'addClass' : 'removeClass']('show');
-//         menu[dropdown.is(':hover') ? 'addClass' : 'removeClass']('show');
-//     }, 300);
-// });
-
-// $(document).ready(function(){ 
-//     $('.search-icon').click(function(){
-//         $('.dynamic-search').toggleClass('active')
-//     })
-// })
-
 var APUSGLOBAL = {};
 
 APUSGLOBAL.init = function(){
@@ -63,15 +46,21 @@ $(document).ready(function(){
 
 // VIDEO HP
 var vid = document.getElementById("bgvid"),
-pauseButton = document.getElementById("vidpause");
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    pauseButton = document.getElementById("vidpause");
+if (window.matchMedia("(prefers-reduced-motion)").matches) {
     vid.removeAttribute("autoplay");
     vid.pause();
     pauseButton.innerHTML = "Paused";
 }
 
 // DYNAMIC SEARCH
-$(document).ready(function(){ 
+$(document).ready(function(){
+    // Check if user prefers reduced motion and show search by default
+    if (window.matchMedia("(prefers-reduced-motion)").matches) {
+        $('.dynamic-search').addClass('active');
+    }
+
+    // Toggle search on click
     $('.search-icon').click(function(){
         $('.dynamic-search').toggleClass('active')
     })

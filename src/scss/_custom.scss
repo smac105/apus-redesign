@@ -176,7 +176,7 @@
       display: grid;
       justify-content: center;
       .img-nuno {
-        max-width: 400px;
+        max-width: 350px;
         display: grid;
         justify-content: center;
         align-items: end;
@@ -220,7 +220,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  min-height: 800px;
+  // min-height: 800px;
   z-index: 2;
   .content{
     padding: 100px 150px 150px;
@@ -234,7 +234,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  min-height: 800px;
+  // min-height: 800px;
   z-index: 2;
   .content{
     padding: 0px 150px;
